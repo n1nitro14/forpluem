@@ -3,10 +3,15 @@
 <head>
   <meta name="theme-color" content="#00675">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-  <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1410892431590953013/1419151599682584707/IMG_2123.png?ex=68d208eb&is=68d0b76b&hm=918d7c3cd8c84b3262b70021a8ec12801057136858d439962fa12dedb33d3825&">
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1410892431590953013/1419151599682584707/IMG_2123.png?ex=68d0b76b&is=68cf65eb&hm=c9ffff1efb7089110ce734d8748e58e7f84f285b4e4893023a233664f2d07818&" />
   <meta charset="UTF-8">
   <title>NisitKU</title>
+  <link rel="stylesheet" href="stlye.css">
   <style>
+  @font-face {
+  font-family: kufont; /* set name */
+  src: url(kubd.ttf); /* url of the font */
+}
     body {
       margin: 0;
       height: 100vh;
@@ -16,82 +21,89 @@
       align-items: center;
       background: url('https://cdn.discordapp.com/attachments/1410892431590953013/1419685282315505755/image0.jpg?ex=68d2a873&is=68d156f3&hm=5a244b73735d7b29c505fd3a37b8b425b4460fd773b523e3c7721640e10f1cd4&') no-repeat center center/cover;
       font-family: sans-serif;
- 
+      background-repeat: no-repeat; /* ไม่ให้รูปภาพซ้ำ */
       background-attachment: fixed; /* ทำให้พื้นหลังไม่เลื่อนตามการเลื่อนหน้า */
       background-size: cover;
     }
 
-    .cardda {
-      position: relative;
-      top: 14%;
-      height: 100%;
-
-    }
-    
-    
     .flip-card {
-      position: relative;
       background-color: transparent;
-      border-radius: 20px;
-      
+      width: 85%;
+      height: 62%;
     }
-    .flip-card-inner {
-      position: relative;
-      text-align: center;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-}
 
-/* เมื่อการ์ดถูกคลิก (มีคลาส 'flipped') ให้ทำการพลิก */
+    .flip-card-inner {
+      position: relative; top:-10%;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
     .flip-card.flipped .flip-card-inner {
       transform: rotateY(180deg);
-      
     }
 
-/* ส่วนหน้าและส่วนหลังของการ์ด */
-.flip-card-front,
-.flip-card-back {
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 50px;
+    }
+
+    .flip-card-front {
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip-card-front img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip-card-back img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .idcard {
+      font-family: kufont;
   position: absolute;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* สไตล์ด้านหน้า */
-.flip-card-front {}
-
-/* สไตล์ด้านหลัง (เริ่มต้นจะถูกซ่อนไว้) */
-.flip-card-back {
-  transform: rotateY(180deg);
-}
-
-/* สไตล์ตัวอักษร */
-.flip-card h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.flip-card p {
-  font-size: 16px;
+  top: 120px;
+  left: 170px;
+  font-size: 28px;
 }
   </style>
 </head>
 <body>
-<div class="flip-card" onclick="this.classList.toggle('flipped')">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419684461435686984/image0.jpg?ex=68d2a7b0&is=68d15630&hm=6c875df5f7a107a64df269cadd9343e4a3daa897e90556788c26abb2c7aa3009&" width="100%" height="100%" alt="">
-    </div>
-    <div class="flip-card-back">
-      <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419081003460464770/IMG_2113.png?ex=68d26fec&is=68d11e6c&hm=984e447dde3fedde0f2a139a25c83d1aaea5328fb632fe5e2cba4173e1660881&" width="100%" height="100%" alt="">
+  <div class="flip-card" id="card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419684461435686984/image0.jpg?ex=68d2a7b0&is=68d15630&hm=6c875df5f7a107a64df269cadd9343e4a3daa897e90556788c26abb2c7aa3009&" alt="Front Image">
+        <div class="idcard">ID 6830156050</div>
+        
+      </div>
+      <div class="flip-card-back">
+        <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419081003460464770/IMG_2113.png?ex=68d26fec&is=68d11e6c&hm=984e447dde3fedde0f2a139a25c83d1aaea5328fb632fe5e2cba4173e1660881&" alt="Back Image">
+      </div>
     </div>
   </div>
-</div>
+
+  <script>
+    const card = document.getElementById('card');
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  </script>
 </body>
 </html>
