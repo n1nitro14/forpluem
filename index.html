@@ -172,7 +172,7 @@
           <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419787780460118046/IMG_2137.jpg?ex=68d307e9&is=68d1b669&hm=6eb79a09521b8c7235fccb030531627905daac0a0163b42609f865bb5d0c7ed1&" alt="">
         </div>
         <div class="idcard">ID 6830156840</div>
-        <div class="name">อภิวิชญ์<br>นิตย์ประเสริฐ</div>
+        <div class="name" id="namethai">อภิวิชญ์<br>นิตย์ประเสริฐ</div>
         
         <div class="name2">Apiwit<br>Nitprasert</div>
         <div class="kana">Management<br>Sciences</div>
@@ -201,7 +201,7 @@
     var url = new URL(url_string);
     var c = url.searchParams.get("name");
     console.log(c);
-    document.getElementById("name").innerHTML = c;
+    document.getElementById("namethai").innerHTML = c;
   </script>
 </body>
 </html>
