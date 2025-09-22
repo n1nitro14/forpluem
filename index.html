@@ -21,61 +21,21 @@
       background-size: cover;
     }
 
-    .flip-card {
-      background-color: transparent;
-      width: 85%;
-      height: 62%;
-    }
+    .cardda {
+      position: relative;
+      top: 14%;
+      height: 100%;
 
-    .flip-card-inner {
-      position: relative; top:-10%;
+    }
+    .cardda iframe {
       width: 100%;
       height: 100%;
-      text-align: center;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-
-    .flip-card.flipped .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .flip-card-front, .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 50px;
-    }
-
-    .flip-card-front {
-    
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .flip-card-front img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    .flip-card-back {
-      transform: rotateY(180deg);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .flip-card-back img {
-      max-width: 100%;
-      max-height: 100%;
     }
   </style>
 </head>
 <body>
-  <div class="cardda" id="carddad">
-    <iframe src="https://n1nitro14.github.io/forpluem/card/" title="cardv1"></iframe>
+  <div class="cardda" id="cardda">
+    <iframe src="/card.html" frameBorder="0" width="100%" height="auto"></iframe>
   </div>
 
   <script>
