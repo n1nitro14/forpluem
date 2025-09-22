@@ -91,7 +91,7 @@
       max-height: 100%;
     }
     .idcard {
-      font-family: kufont;
+      font-family: ku2font;
   position: absolute;
   top: 120px;
   left: 170px;
@@ -169,7 +169,7 @@
       <div class="flip-card-front">
         <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419762742725967953/6_20250923021007.jpg?ex=68d2f097&is=68d19f17&hm=5d7ed1f193c2fcabb3be8c48f7a8874cc34b7372a762f08868ea2ec841b0a607&" alt="Front Image">
         <div class="profile">
-          <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419679442397036565/IMG_1617.jpg?ex=68d2a303&is=68d15183&hm=2652cda42baf4532ac08e81ad8b736770253b8bee9b9deff69a501fba3c662eb&" alt="">
+          <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419787780460118046/IMG_2137.jpg?ex=68d307e9&is=68d1b669&hm=6eb79a09521b8c7235fccb030531627905daac0a0163b42609f865bb5d0c7ed1&" alt="">
         </div>
         <div class="idcard">ID 6830156840</div>
         <div class="name">อภิวิชญ์<br>นิตย์ประเสริฐ</div>
@@ -196,6 +196,11 @@
     card.addEventListener('click', () => {
       card.classList.toggle('flipped');
     });
+    
+    var url_string = window.location.href; //window.location.href
+    var url = new URL(url_string);
+    var c = url.searchParams.get("name");
+    console.log(c);
   </script>
 </body>
 </html>
