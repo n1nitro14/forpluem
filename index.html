@@ -186,7 +186,7 @@
   <div class="toppf">
     <div class="toppff">
 <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419757455113457714/image0.jpg?ex=68d2ebab&is=68d19a2b&hm=a05da3a365c26c761b7a39c3a01c91bc8a9da8422f9ff150815e2a6c37e2dc9a&" width="30px" height="30px" alt="Profile y">
-        <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419787780460118046/IMG_2137.jpg" alt="Profile Picture">
+        <img src="https://cdn.discordapp.com/attachments/1410892431590953013/1419787780460118046/IMG_2137.jpg" id="profilex"alt="Profile Picture">
         <span class="user-name" id="onlyname"></span>
     </div>
 </div>
@@ -214,6 +214,11 @@ document.getElementById("onlyname").innerHTML = onlyn;
 var idcardnum = url.searchParams.get("idcard");
 document.getElementById("idcardnum").innerHTML = "ID "+idcardnum;
 
+var imh = url.searchParams.get("imgprofile");
+document.getElementById("profilez").src = "https://cdn.discordapp.com/attachments/"+imh;
+
+var t = url.searchParams.get("imgprofile");
+document.getElementById("profilex").src = "https://cdn.discordapp.com/attachments/"+t;
 
 
   </script>
