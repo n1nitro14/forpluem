@@ -90,22 +90,20 @@
       max-width: 100%;
       max-height: 100%;
     }
-    .idcard {
-      font-family: ku2font;
+.idcard {
+  /* ... font-family, font-size ... */
   position: absolute;
-  top: 120px;
-  left: 170px;
-  font-size: 28px;
+  top: 12%;  /* เดิม: 120px */
+  left: 45%; /* เดิม: 170px */
 }
 .name {
-  text-align: left;
-  font-family: kufont;
-  line-height: 24px;
+  /* ... font-family, font-size ... */
   position: absolute;
-  top: 160px;
-  left: 171px;
-  font-size: 26px;
+  top: 22%;  /* เดิม: 160px */
+  left: 45%; /* เดิม: 171px */
 }
+/* และทำแบบเดียวกันกับ .name2 และ .kana */
+
 .name2 {
   text-align: left;
   font-family: ku2font;
@@ -126,9 +124,11 @@
 }
 .profile {
   position: absolute;
-  top: 149px;
-  left: 13px;
+  top: 26%;   /* อ้างอิงจากความสูงของบัตร */
+  left: 3.5%;  /* อ้างอิงจากความกว้างของบัตร */
   height: 31%;
+  /* แนะนำให้เพิ่ม width: auto; เพื่อรักษาสัดส่วนภาพ */
+  width: auto;
 }
 .toppf {
   color: white;
