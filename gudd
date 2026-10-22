@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "message": "Hi!",
+  "disabled_reason": "Tool is currently under maintenance. Please wait for an update.",
+  "version": "1.0.0"
+}
